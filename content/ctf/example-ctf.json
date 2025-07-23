@@ -1,0 +1,12 @@
+{
+  "title": "Buffer Overflow Challenge",
+  "description": "Buffer overflow challenge with stack exploitation",
+  "date": "2024-01-15",
+  "difficulty": "Medium",
+  "tags": ["Binary Exploitation", "Stack Overflow", "Assembly"],
+  "platform": "PicoCTF",
+  "points": 250,
+  "content": "# Detailed CTF write-up...",
+  "tools": ["GDB", "pwntools", "checksec"],
+  "references": ["https://owasp.org/www-community/vulnerabilities/Buffer_Overflow"]
+}

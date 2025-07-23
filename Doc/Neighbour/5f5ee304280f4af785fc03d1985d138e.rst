@@ -1,0 +1,41 @@
+So an easy one.
+
+https://tryhackme.com/room/neighbour
+
+.. image:: vertopal_5f5ee304280f4af785fc03d1985d138e/media/image1.png
+   :width: 6.26772in
+   :height: 2.01389in
+
+so we’re accessing the url and we get this website (very pretty btw)
+
+.. image:: vertopal_5f5ee304280f4af785fc03d1985d138e/media/image2.png
+   :width: 6.26772in
+   :height: 2.08333in
+
+since i don’t have an account i’ll naively press ctrl+u and it opens the
+source code of the page
+
+.. image:: vertopal_5f5ee304280f4af785fc03d1985d138e/media/image4.png
+   :width: 6.26772in
+   :height: 4.68056in
+
+this source code gives us a hint on how we can access the guest account
+by having the login and the password as followed :
+
+Login : guest
+
+Password : guest
+
+and we get our profile page.
+
+.. image:: vertopal_5f5ee304280f4af785fc03d1985d138e/media/image3.png
+   :width: 6.26772in
+   :height: 1.47222in
+
+and we can easily move laterally and get the admin user.
+
+.. image:: vertopal_5f5ee304280f4af785fc03d1985d138e/media/image5.png
+   :width: 6.26772in
+   :height: 1.375in
+
+and that’s it. there’s the flag right here.
