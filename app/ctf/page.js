@@ -156,7 +156,7 @@ export default function CTFPage() {
         <Trophy className="w-16 h-16 mx-auto mb-4 text-purple-600" />
         <h1 className="text-4xl font-bold mb-4">My CTFs</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Collection of all the CTFs I've solved, with detailed write-ups and technical explanations for
+          Collection of all the CTFs I&apos;ve solved, with detailed write-ups and technical explanations for
           each challenge.
         </p>
       </div>

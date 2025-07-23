@@ -1,5 +1,6 @@
 import { Shield, Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -31,19 +32,19 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="/" className="hover:text-white transition-colors">
+                <Link href="/" className="hover:text-white transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/ctf" className="hover:text-white transition-colors">
+                <Link href="/ctf" className="hover:text-white transition-colors">
                   CTFs
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/blog" className="hover:text-white transition-colors">
+                <Link href="/blog" className="hover:text-white transition-colors">
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -52,24 +53,24 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Categories</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="/ctf?tag=web" className="hover:text-white transition-colors">
+                <Link href="/ctf?tag=web" className="hover:text-white transition-colors">
                   Web Security
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/ctf?tag=crypto" className="hover:text-white transition-colors">
+                <Link href="/ctf?tag=crypto" className="hover:text-white transition-colors">
                   Cryptography
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/ctf?tag=binary" className="hover:text-white transition-colors">
+                <Link href="/ctf?tag=binary" className="hover:text-white transition-colors">
                   Binary Exploitation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/ctf?tag=forensics" className="hover:text-white transition-colors">
+                <Link href="/ctf?tag=forensics" className="hover:text-white transition-colors">
                   Forensics
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
