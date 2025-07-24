@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Shield, Code, Trophy, BookOpen, Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
-import Navigation from "@/components/navigation"
 
 export default function HomePage() {
   const stats = [
@@ -21,7 +20,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-20">
         <div className="container mx-auto px-4">

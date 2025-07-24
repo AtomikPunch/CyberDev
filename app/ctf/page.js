@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Trophy, Calendar, Search, Filter } from "lucide-react"
-import Navigation from "@/components/navigation"
 
 // Sample CTF data
 const ctfsData = [
@@ -151,7 +150,6 @@ export default function CTFPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
-      <Navigation />
       <div className="text-center mb-12">
         <Trophy className="w-16 h-16 mx-auto mb-4 text-purple-600" />
         <h1 className="text-4xl font-bold mb-4">My CTFs</h1>

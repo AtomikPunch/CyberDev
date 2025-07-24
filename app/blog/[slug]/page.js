@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react"
 import Link from "next/link"
-import Navigation from "@/components/navigation"
 
 // Sample blog post data with detailed content
 const blogPosts = {
@@ -119,7 +118,6 @@ export default function BlogPostPage({ params }) {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Back Button */}
-      <Navigation />
       <div className="mb-6">
         <Button variant="ghost" asChild>
           <Link href="/blog">

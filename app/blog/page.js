@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { BookOpen, Calendar, Clock } from "lucide-react"
-import Navigation from "@/components/navigation"
 
 // Sample blog post data
 const blogPosts = [
@@ -62,7 +61,6 @@ export default function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
-      <Navigation />
       <div className="text-center mb-12">
         <BookOpen className="w-16 h-16 mx-auto mb-4 text-purple-600" />
         <h1 className="text-4xl font-bold mb-4">Blog</h1>

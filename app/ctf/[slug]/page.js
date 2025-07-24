@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Trophy, Calendar, ArrowLeft, ExternalLink } from "lucide-react"
 import Link from "next/link"
-import Navigation from "@/components/navigation"
 import ReactMarkdown from "react-markdown"
 import rehypeHighlight from "rehype-highlight"
 import "highlight.js/styles/github.css"
@@ -620,8 +619,7 @@ export default function CTFDetailPage({ params }) {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Back Button */}
-      <Navigation />
+      {/* Back Button */} 
       <div className="mb-6">
         <Button variant="ghost" asChild>
           <Link href="/ctf">
