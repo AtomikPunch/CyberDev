@@ -27,8 +27,8 @@ export default function HomePage() {
             <div className="mb-6">
               <Shield className="w-16 h-16 mx-auto mb-4 text-purple-400" />
             </div>
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Cybersecurity Expert
+            <h1 className="text-5xl leading-normal font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              CyberDev blog
             </h1>
             <p className="text-xl mb-8 text-gray-300 leading-relaxed">
               Passionate about information security, I share my discoveries through CTFs, vulnerability analysis
