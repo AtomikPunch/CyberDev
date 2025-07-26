@@ -6,7 +6,7 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "CyberDev blog",
+  title: "The Packet Drop",
   description:
     "Personal blog dedicated to cybersecurity: CTFs, technical articles, vulnerability analysis and experience sharing.",
 }

@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Shield className="h-6 w-6 text-purple-400" />
-              <span className="font-bold text-xl">CyberBlog</span>
+              <span className="font-bold text-xl">The Packet Drop</span>
             </div>
             <p className="text-gray-400 mb-4">
               Personal blog dedicated to cybersecurity and sharing my knowledge.
