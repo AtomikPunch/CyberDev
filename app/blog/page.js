@@ -137,21 +137,6 @@ export default function BlogPage() {
         </div>
       </div>
 
-      {/* Newsletter Signup */}
-      <div className="bg-gray-50 rounded-lg p-8 text-center">
-        <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
-        <p className="text-gray-600 mb-6">
-          Subscribe to receive the latest articles and cybersecurity insights directly in your inbox.
-        </p>
-        <div className="flex max-w-md mx-auto gap-2">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-          />
-          <Button>Subscribe</Button>
-        </div>
       </div>
-    </div>
   )
 }
