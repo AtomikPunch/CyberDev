@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -95,27 +97,40 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-center mb-12">About</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
+                <h3 className="text-2xl font-semibold mb-4">Hi, I'm Jad Yamout</h3>
                 <p className="text-gray-600 mb-4">
-                  Graduated in cybersecurity with a specialization in penetration testing and malware analysis.
-                  Currently working as an information security consultant, I work on penetration testing and security
-                  audit missions for various companies.
+                  An engineer with a passion for cybersecurity, technology, and making the digital world safer for everyone. 
+                  With hands-on experience in identity and access management (IAM), threat modeling, and security automation, 
+                  I use this blog to share practical insights, tutorials, and reflections from the field.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Whether you're a fellow professional, a student, or just curious about cybersecurity, 
+                  I hope you'll find something valuable here.
                 </p>
                 <p className="text-gray-600 mb-6">
-                  My passion for CTFs has allowed me to develop deep expertise in many areas of cybersecurity,
-                  from binary exploitation to cryptography and web security.
+                  When I'm not writing about security, I'm probably building something new, testing a system, 
+                  or diving into the latest tech trends.
+                </p>
+                <p className="text-gray-600 mb-6 font-medium">
+                  Let's explore cybersecurity—one vulnerability, one solution at a time.
                 </p>
                 <div className="flex gap-4">
                   <Button variant="outline" size="sm">
-                    <Github className="w-4 h-4 mr-2" />
+                    <Link href="https://github.com/AtomikPunch" target="_blank" rel="noopener noreferrer">
+                      <Github className="w-4 h-4 mr-2" />
+                    </Link>
                     GitHub
                   </Button>
                   <Button variant="outline" size="sm">
-                    <Linkedin className="w-4 h-4 mr-2" />
+                    <Link href="https://www.linkedin.com/in/jadyamout/" target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="w-4 h-4 mr-2" />
+                    </Link>
                     LinkedIn
                   </Button>
                   <Button variant="outline" size="sm">
-                    <Mail className="w-4 h-4 mr-2" />
+                    <Link href="mailto:jad.y@hotmail.fr">
+                      <Mail className="w-4 h-4 mr-2" />
+                    </Link>
                     Contact
                   </Button>
                 </div>
