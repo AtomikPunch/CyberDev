@@ -17,13 +17,15 @@ export default function CTFPage() {
 
   useEffect(() => {
     async function fetchAllMetadata() {
-      const slugs = [
-        "soc-simulator-analysis",
-        "code-reversing-challenge",
-        "neighbour-web-app"
-      ]
-
       try {
+        // First, fetch the slugs from GitHub
+        const slugsResponse = await fetch('/api/ctf/slugs')
+        if (!slugsResponse.ok) {
+          throw new Error(`Failed to fetch slugs: ${slugsResponse.status}`)
+        }
+        const slugs = await slugsResponse.json()
+
+        // Then fetch metadata for each slug
         const results = await Promise.all(
           slugs.map(async (slug) => {
             try {
