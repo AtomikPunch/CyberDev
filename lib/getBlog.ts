@@ -1,5 +1,10 @@
 import matter from "gray-matter"
 
+interface GitHubTreeItem {
+  type: string
+  path: string
+}
+
 export async function fetchBlogFromGitHub(slug: string) {
   const url = `https://raw.githubusercontent.com/AtomikPunch/Blog_Writeup/main/${slug}.md`
   const res = await fetch(url)
@@ -39,12 +44,12 @@ export async function fetchBlogSlugs(): Promise<string[]> {
 
     // Step 4: Filter for markdown files in the root directory and extract slugs
     const slugs = treeData.tree
-      .filter((item: any) => 
+      .filter((item: GitHubTreeItem) => 
         item.type === 'blob' && 
         item.path.endsWith('.md') && 
         !item.path.includes('/') // Only files in root directory
       )
-      .map((item: any) => item.path.replace('.md', ''))
+      .map((item: GitHubTreeItem) => item.path.replace('.md', ''))
 
     return slugs
   } catch (error) {

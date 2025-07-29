@@ -22,7 +22,7 @@ export default async function CTFDetailPage({ params }) {
     const result = await fetchCTFFromGitHub(params.slug)
     metadata = result.metadata
     content = result.content
-  } catch (error) {
+  } catch {
     notFound()
   }
 

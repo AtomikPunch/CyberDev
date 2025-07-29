@@ -97,22 +97,22 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-center mb-12">About</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-semibold mb-4">Hi, I'm Jad Yamout</h3>
+                <h3 className="text-2xl font-semibold mb-4">Hi, I&apos;m Jad Yamout</h3>
                 <p className="text-gray-600 mb-4">
                   An engineer with a passion for cybersecurity, technology, and making the digital world safer for everyone. 
                   With hands-on experience in identity and access management (IAM), threat modeling, and security automation, 
                   I use this blog to share practical insights, tutorials, and reflections from the field.
                 </p>
                 <p className="text-gray-600 mb-4">
-                  Whether you're a fellow professional, a student, or just curious about cybersecurity, 
-                  I hope you'll find something valuable here.
+                  Whether you&apos;re a fellow professional, a student, or just curious about cybersecurity, 
+                  I hope you&apos;ll find something valuable here.
                 </p>
                 <p className="text-gray-600 mb-6">
-                  When I'm not writing about security, I'm probably building something new, testing a system, 
+                  When I&apos;m not writing about security, I&apos;m probably building something new, testing a system, 
                   or diving into the latest tech trends.
                 </p>
                 <p className="text-gray-600 mb-6 font-medium">
-                  Let's explore cybersecurity—one vulnerability, one solution at a time.
+                  Let&apos;s explore cybersecurity—one vulnerability, one solution at a time.
                 </p>
                 <div className="flex gap-4">
                   <Button variant="outline" size="sm">
