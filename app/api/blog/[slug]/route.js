@@ -7,7 +7,7 @@ export async function GET(req, { params }) {
     return new Response(JSON.stringify({ metadata, content }), {
       headers: { "Content-Type": "application/json" },
     })
-  } catch (_) {
+  } catch {
     return new Response(JSON.stringify({ error: "Blog post not found" }), { status: 404 })
   }
 } 

@@ -7,7 +7,7 @@ export async function GET(req, { params }) {
     return new Response(JSON.stringify({ metadata }), {
       headers: { "Content-Type": "application/json" },
     })
-  } catch (_) {
+  } catch {
     return new Response(JSON.stringify({ error: "CTF not found" }), { status: 404 })
   }
 } 
