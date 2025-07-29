@@ -24,7 +24,7 @@ export default function Navigation() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Shield className="h-6 w-6 text-purple-600" />
-            <span className="font-bold text-xl">The Packet Drop</span>
+            <span className="font-bold text-xl">The Exploit Chronicle</span>
           </Link>
 
           {/* Desktop Navigation */}
