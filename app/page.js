@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Shield, Code, Trophy, BookOpen, Github, Linkedin, Mail, Download, User, Calendar, MapPin, Phone, Mail as MailIcon, Globe, Award, Briefcase, GraduationCap, ChevronDown } from "lucide-react"
+import { Shield, Code, Github, Linkedin, Mail, Download, MapPin, Phone, Mail as MailIcon, Globe, Award, Briefcase, ChevronDown } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -228,7 +228,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
           <div className="space-y-6 text-gray-700">
             <p>
-              I'm <strong>Jad Yamout</strong>, a digital engineer specialized in cybersecurity, graduated from ESIEA with a double focus on technical mastery and business strategy. Over the past three years, I've built strong expertise in penetration testing, IAM, malware analysis, and system hardening — both on the field and through academic research.
+              I&apos;m <strong>Jad Yamout</strong>, a digital engineer specialized in cybersecurity, graduated from ESIEA with a double focus on technical mastery and business strategy. Over the past three years, I&apos;ve built strong expertise in penetration testing, IAM, malware analysis, and system hardening — both on the field and through academic research.
             </p>
             <p>
               During my time at <strong>B/Acceptance</strong>, I led several projects from kickoff to delivery — including meetings, reporting, and client communication. I worked directly with the Chief Information Security Officer, contributing to security policy design and enforcement.
@@ -237,7 +237,7 @@ export default function HomePage() {
               My technical background includes <strong>TLS encryption, VLAN segmentation, ACL design, ISO 27001 compliance, and Azure Entra ID</strong> for identity and access management. I also deployed phishing simulations and contributed to endpoint security through Microsoft Defender and PowerShell automation.
             </p>
             <p>
-              What drives me? Applying advanced security practices to protect real-world systems — especially in critical environments. I'm motivated, detail-oriented, and eager to keep growing in a challenging, impactful cybersecurity role.
+              What drives me? Applying advanced security practices to protect real-world systems — especially in critical environments. I&apos;m motivated, detail-oriented, and eager to keep growing in a challenging, impactful cybersecurity role.
             </p>
           </div>
         </div>
