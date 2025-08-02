@@ -3,75 +3,207 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Shield, Code, Trophy, BookOpen, Github, Linkedin, Mail } from "lucide-react"
+import { Shield, Code, Trophy, BookOpen, Github, Linkedin, Mail, Download, User, Calendar, MapPin, Phone, Mail as MailIcon, Globe, Award, Briefcase, GraduationCap, ChevronDown } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
   const stats = [
-    { label: "CTFs Solved", value: "25+", icon: Trophy },
-    { label: "Articles Published", value: "12", icon: BookOpen },
-    { label: "Years of Experience", value: "3", icon: Shield },
-    { label: "GitHub Projects", value: "15+", icon: Code },
+    { label: "Years of Experience", value: "3+", icon: Briefcase },
+    { label: "Certifications", value: "3", icon: Award },
+    { label: "Languages", value: "2", icon: Globe },
+    { label: "Projects", value: "15+", icon: Code },
   ]
 
-  const recentCTFs = [
-    { title: "Buffer Overflow Challenge", difficulty: "Hard", tag: "Binary Exploitation" },
-    { title: "XSS Reflected Attack", difficulty: "Medium", tag: "Web Security" },
-    { title: "RSA Crypto Challenge", difficulty: "Easy", tag: "Cryptography" },
+  const certifications = [
+    { name: "AZ-500", status: "In Progress", description: "Microsoft Azure Security Technologies" },
+    { name: "Stormshield Certification", status: "SecNumedu", description: "Network Security" },
+    { name: "WALLIX Bastion", status: "PAM", description: "Privileged Access Management" },
+  ]
+
+  const skills = {
+    "Programming": ["Python", "C", "Java", "C#", "JavaScript"],
+    "OS & Tools": ["Windows", "Linux", "Git", "Docker", "Jenkins"],
+    "Databases": ["Neo4j", "MySQL", "MongoDB"],
+    "Security Tools": ["Splunk", "Microsoft Intune", "Microsoft Defender", "Azure", "Ansible"],
+    "Office Tools": ["Pack Office", "Trello", "Excel", "CSV", "Pivot Tables"]
+  }
+
+  const experiences = [
+    {
+      title: "Consultant QA",
+      company: "Sight",
+      location: "Paris",
+      period: "Since May 2025",
+      description: "Quality assurance and testing automation"
+    },
+    {
+      title: "Assistant SI - Alternant Consultant Automaticien",
+      company: "B/acceptance",
+      location: "Paris",
+      period: "October 2022 - September 2024",
+      description: "IT Assistant - Apprentice Automation Consultant",
+      achievements: [
+        "Security monitoring of endpoints with Microsoft Defender for Endpoint",
+        "Centralized management via Microsoft Intune (policies, compliance, app deployment)",
+        "Identity and access administration with Microsoft Entra ID (MFA, RBAC)",
+        "Audit automation via PowerShell",
+        "Deployment of personalized PowerShell scripts for local protections",
+        "Automated application installation via Intune",
+        "Simulation of attacks through internal phishing campaigns",
+        "Implementation of advanced security policies via OMA-URI (CSP)",
+        "Monitoring and improvement of Windows security score to meet ISO 27001 standards",
+        "Front-end and back-end test automation with Ranorex, Cypress and Selenium",
+        "Design of automated test scenarios in JavaScript, TypeScript and C#",
+        "Integration of tests into pipelines with Jenkins and GitLab CI/CD"
+      ]
+    }
+  ]
+
+  const education = [
+    {
+      degree: "Diplôme d'Ingénieur du Numérique - Spécialisation Cybersécurité",
+      school: "ESIEA",
+      location: "Paris",
+      period: "September 2019 - August 2024",
+      description: "Digital Engineering Degree - Cybersecurity Specialization - Business Engineer Option",
+      courses: [
+        "Contrôle et audit (ISO 27001, EBIOS RM, Pentest, GDPR compliance)",
+        "Gestion des identités et des accès (SSO, MFA, OAuth2, Active Directory, Zero Trust)",
+        "Forensic (Digital investigation)",
+        "Sécurisation des interconnexions (IPSec, TLS, Zero Trust Network)",
+        "Sécurisation des réseaux locaux (Local network security)",
+        "Virtual Private Network Managing Security in Google Cloud"
+      ]
+    },
+    {
+      degree: "BIP Transform to Sustain",
+      school: "University of Split",
+      location: "Split, Croatia",
+      period: "May 2022 - July 2022",
+      description: "Sustainable future enabled by digital transformation",
+      courses: ["AI-equipped drones for agricultural optimization"]
+    },
+    {
+      degree: "Semestre d'échange académique",
+      school: "Glyndwr University",
+      location: "Wales, United Kingdom",
+      period: "September 2021 - February 2022",
+      description: "Academic Exchange Semester",
+      courses: ["Applied Programming", "Cyber Security and Forensics", "Server Technologies"]
+    }
   ]
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-6">
-              <Shield className="w-16 h-16 mx-auto mb-4 text-purple-400" />
+              <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="mb-6">
+                <Shield className="w-16 h-16 mx-auto mb-4 text-purple-400" />
+              </div>
+              <h1 className="text-5xl leading-normal font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Jad YAMOUT
+              </h1>
+              <p className="text-xl mb-4 text-gray-300 leading-relaxed">
+                Digital Engineer Graduate – Cybersecurity Specialization
+              </p>
+              <p className="text-lg mb-8 text-gray-400 leading-relaxed">
+                Autonomous and motivated professional with hands-on experience in cybersecurity engineering. 
+                My professional journey has strengthened the technical and strategic skills acquired during 
+                my engineering education at ESIEA, specializing in information security and digital protection.
+              </p>
+              
+              {/* Contact Info */}
+              <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+                <div className="flex items-center gap-2">
+                  <MailIcon className="w-4 h-4" />
+                  <span>jady@hotmail.fr</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  <span>+33 6 51 83 27 57</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>Paris, France</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <Badge variant="secondary" className="text-sm px-3 py-1">
+                  Cybersecurity
+                </Badge>
+                <Badge variant="secondary" className="text-sm px-3 py-1">
+                  IAM & Security
+                </Badge>
+                <Badge variant="secondary" className="text-sm px-3 py-1">
+                  Penetration Testing
+                </Badge>
+                <Badge variant="secondary" className="text-sm px-3 py-1">
+                  Cloud Security
+                </Badge>
+              </div>
+              <div className="flex justify-center gap-4">
+                <Button asChild size="lg">
+                  <Link href="/CV_2025_F_Jad_Yamout.pdf" target="_blank">
+                    <Download className="w-4 h-4 mr-2" />
+                    Download CV
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="text-white border-white hover:bg-white hover:text-slate-900 bg-transparent"
+                >
+                  <Link href="https://www.linkedin.com/in/jadyamout/" target="_blank">
+                    <Linkedin className="w-4 h-4 mr-2" />
+                    LinkedIn
+                  </Link>
+                </Button>
+                  <Button 
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="text-white border-white hover:bg-white hover:text-slate-900 bg-transparent">
+                    <Link href="https://github.com/AtomikPunch" target="_blank" rel="noopener noreferrer">
+                      <Github className="w-4 h-4 mr-2" />
+                      GitHub
+                    </Link>
+                  </Button>
+                  <Button 
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="text-white border-white hover:bg-white hover:text-slate-900 bg-transparent">
+                    <Link href="mailto:jad.y@hotmail.fr">
+                      <Mail className="w-4 h-4 mr-2" />
+                      Contact me !
+                    </Link>
+                  </Button>
+              </div>
             </div>
-            <h1 className="text-5xl leading-normal font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              CyberDev blog
-            </h1>
-            <p className="text-xl mb-8 text-gray-300 leading-relaxed">
-              Passionate about information security, I share my discoveries through CTFs, vulnerability analysis
-              and technical articles. Currently specialized in penetration testing and malware analysis.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Badge variant="secondary" className="text-sm px-3 py-1">
-                Penetration Testing
-              </Badge>
-              <Badge variant="secondary" className="text-sm px-3 py-1">
-                Reverse Engineering
-              </Badge>
-              <Badge variant="secondary" className="text-sm px-3 py-1">
-                Web Security
-              </Badge>
-              <Badge variant="secondary" className="text-sm px-3 py-1">
-                Cryptography
-              </Badge>
-            </div>
-            <div className="flex justify-center gap-4">
-              <Button asChild size="lg">
-                <Link href="/ctf">
-                  <Trophy className="w-4 h-4 mr-2" />
-                  View my CTFs
-                </Link>
-              </Button>
+            
+            {/* Scroll Arrow */}
+            <div className="flex justify-center mt-12">
               <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="text-white border-white hover:bg-white hover:text-slate-900 bg-transparent"
+                onClick={() => {
+                  document.getElementById('about-me')?.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  })
+                }}
+                variant="ghost"
+                size="sm"
+                className="text-white hover:text-purple-300 hover:bg-white/10 transition-all duration-300 animate-bounce"
               >
-                <Link href="/blog">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  Cybersecurity Blog
-                </Link>
+                <ChevronDown className="w-6 h-6" />
+                About me
               </Button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
@@ -90,86 +222,138 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Section */}
+       {/* About Me */}
+       <section id="about-me" className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
+          <div className="space-y-6 text-gray-700">
+            <p>
+              I'm <strong>Jad Yamout</strong>, a digital engineer specialized in cybersecurity, graduated from ESIEA with a double focus on technical mastery and business strategy. Over the past three years, I've built strong expertise in penetration testing, IAM, malware analysis, and system hardening — both on the field and through academic research.
+            </p>
+            <p>
+              During my time at <strong>B/Acceptance</strong>, I led several projects from kickoff to delivery — including meetings, reporting, and client communication. I worked directly with the Chief Information Security Officer, contributing to security policy design and enforcement.
+            </p>
+            <p>
+              My technical background includes <strong>TLS encryption, VLAN segmentation, ACL design, ISO 27001 compliance, and Azure Entra ID</strong> for identity and access management. I also deployed phishing simulations and contributed to endpoint security through Microsoft Defender and PowerShell automation.
+            </p>
+            <p>
+              What drives me? Applying advanced security practices to protect real-world systems — especially in critical environments. I'm motivated, detail-oriented, and eager to keep growing in a challenging, impactful cybersecurity role.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            <div className="space-y-8">
+              {experiences.map((exp, index) => (
+                <Card key={index}>
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-900">{exp.title}</h3>
+                        <p className="text-lg text-purple-600 font-medium">{exp.company}</p>
+                        <p className="text-gray-600">{exp.location}</p>
+                      </div>
+                      <Badge variant="outline" className="text-sm">
+                        {exp.period}
+                      </Badge>
+                    </div>
+                    <p className="text-gray-700 mb-4">{exp.description}</p>
+                    {exp.achievements && (
+                      <ul className="list-disc list-inside space-y-2 text-gray-600">
+                        {exp.achievements.map((achievement, idx) => (
+                          <li key={idx} className="text-sm">{achievement}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">About</h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4">Hi, I&apos;m Jad Yamout</h3>
-                <p className="text-gray-600 mb-4">
-                  An engineer with a passion for cybersecurity, technology, and making the digital world safer for everyone. 
-                  With hands-on experience in identity and access management (IAM), threat modeling, and security automation, 
-                  I use this blog to share practical insights, tutorials, and reflections from the field.
-                </p>
-                <p className="text-gray-600 mb-4">
-                  Whether you&apos;re a fellow professional, a student, or just curious about cybersecurity, 
-                  I hope you&apos;ll find something valuable here.
-                </p>
-                <p className="text-gray-600 mb-6">
-                  When I&apos;m not writing about security, I&apos;m probably building something new, testing a system, 
-                  or diving into the latest tech trends.
-                </p>
-                <p className="text-gray-600 mb-6 font-medium">
-                  Let&apos;s explore cybersecurity—one vulnerability, one solution at a time.
-                </p>
-                <div className="flex gap-4">
-                  <Button variant="outline" size="sm">
-                    <Link href="https://github.com/AtomikPunch" target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                    </Link>
-                    GitHub
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    <Link href="https://www.linkedin.com/in/jadyamout/" target="_blank" rel="noopener noreferrer">
-                      <Linkedin className="w-4 h-4 mr-2" />
-                    </Link>
-                    LinkedIn
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    <Link href="mailto:jad.y@hotmail.fr">
-                      <Mail className="w-4 h-4 mr-2" />
-                    </Link>
-                    Contact
-                  </Button>
-                </div>
-              </div>
+            <h2 className="text-3xl font-bold text-center mb-12">Education</h2>
+            <div className="space-y-8">
+              {education.map((edu, index) => (
+                <Card key={index}>
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-900">{edu.degree}</h3>
+                        <p className="text-lg text-purple-600 font-medium">{edu.school}</p>
+                        <p className="text-gray-600">{edu.location}</p>
+                      </div>
+                      <Badge variant="outline" className="text-sm">
+                        {edu.period}
+                      </Badge>
+                    </div>
+                    <p className="text-gray-700 mb-4">{edu.description}</p>
+                    <ul className="list-disc list-inside space-y-2 text-gray-600">
+                      {edu.courses.map((course, idx) => (
+                        <li key={idx} className="text-sm">{course}</li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div>
-                <h3 className="text-2xl font-semibold mb-4">Recent CTFs</h3>
-                <div className="space-y-4">
-                  {recentCTFs.map((ctf, index) => (
-                    <Card key={index}>
-                      <CardContent className="p-4">
-                        <div className="flex justify-between items-start mb-2">
-                          <Badge
-                            variant="outline"
-                            className={
-                              ctf.difficulty === "Easy"
-                                ? "text-green-600 border-green-200"
-                                : ctf.difficulty === "Medium"
-                                ? "text-yellow-600 border-yellow-200"
-                                : "text-red-600 border-red-200"
-                            }
-                          >
-                            {ctf.difficulty}
-                          </Badge>
-                          <Badge variant="secondary" className="text-xs">
-                            {ctf.tag}
-                          </Badge>
-                        </div>
-                        <h4 className="font-semibold">{ctf.title}</h4>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-                <div className="mt-6">
-                  <Button asChild variant="outline" className="w-full">
-                    <Link href="/ctf">View all CTFs</Link>
-                  </Button>
-                </div>
-              </div>
+      {/* Skills Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">Skills & Technologies</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Object.entries(skills).map(([category, skillList]) => (
+                <Card key={category}>
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold mb-4 text-gray-900">{category}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skillList.map((skill) => (
+                        <Badge key={skill} variant="secondary" className="text-xs">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">Certifications</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {certifications.map((cert, index) => (
+                <Card key={index}>
+                  <CardContent className="p-6 text-center">
+                    <Award className="w-12 h-12 mx-auto mb-4 text-purple-600" />
+                    <h3 className="text-lg font-semibold mb-2">{cert.name}</h3>
+                    <Badge variant="outline" className="mb-2">
+                      {cert.status}
+                    </Badge>
+                    <p className="text-sm text-gray-600">{cert.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>

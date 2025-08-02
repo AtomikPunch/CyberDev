@@ -51,8 +51,8 @@ export default async function CTFDetailPage({ params }) {
         </Button>
       </div>
 
-       {/* Header */}
-       <div className="mb-8">
+      {/* Header */}
+      <div className="mb-8">
         <div className="flex flex-wrap items-center gap-4 mb-4">
           <Badge className={getDifficultyColor(metadata.difficulty)}>{metadata.difficulty}</Badge>
           <Badge variant="outline">{metadata.platform}</Badge>
@@ -77,9 +77,9 @@ export default async function CTFDetailPage({ params }) {
           <Card>
             <CardContent className="p-8">
               <div className="prose max-w-none">
-                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
                   {content}
-                </ReactMarkdown>
+              </ReactMarkdown>
               </div>
             </CardContent>
           </Card>
@@ -87,39 +87,39 @@ export default async function CTFDetailPage({ params }) {
 
         {/* Sidebar */}
         <div className="lg:col-span-1 space-y-6">
-          <Card>
+            <Card>
             <CardHeader><CardTitle>Tools Used</CardTitle></CardHeader>
-            <CardContent>
+              <CardContent>
               {metadata.tools?.map((tool,i)=><div key={i} className="text-sm text-gray-600">{tool}</div>)}
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
 
-          <Card>
+            <Card>
             <CardHeader><CardTitle>References</CardTitle></CardHeader>
-            <CardContent>
+              <CardContent>
               {metadata.references?.map((ref,i)=>(
                 <a key={i} href={ref} target="_blank" rel="noopener noreferrer"
                    className="flex items-center text-sm text-blue-600 hover:text-blue-800">
                   <ExternalLink className="w-3 h-3 mr-1" /> Learn more
-                </a>
-              ))}
-            </CardContent>
-          </Card>
+                    </a>
+                  ))}
+              </CardContent>
+            </Card>
 
-          {/* Share */}
-          <Card>
-            <CardHeader>
+            {/* Share */}
+            <Card>
+              <CardHeader>
               <CardTitle>Share</CardTitle>
-            </CardHeader>
-            <CardContent>
+              </CardHeader>
+              <CardContent>
               <div className="flex gap-2">
                 <Button variant="outline" size="sm" className="flex-1">
                   <Trophy className="w-4 h-4 mr-2" />
                   Share
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
         </div>
       </div>
     </div>
