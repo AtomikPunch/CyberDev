@@ -14,7 +14,24 @@ export async function fetchCTFFromGitHub(slug: string) {
   const raw = await res.text()
   const { data: metadata, content } = matter(raw)
 
-  return { metadata, content }
+  // Transform relative image URLs to GitHub raw URLs
+  const transformedContent = content.replace(
+    /!\[([^\]]*)\]\(([^)]+)\)/g,
+    (match, altText, imagePath) => {
+      // If it's already a full URL, keep it as is
+      if (imagePath.startsWith('http')) {
+        return match
+      }
+      
+      // If it's a relative path, convert to GitHub raw URL
+      const cleanPath = imagePath.replace(/^\.\//, '') // Remove ./ if present
+      const githubRawUrl = `https://raw.githubusercontent.com/AtomikPunch/CTF_Writeups/main/${cleanPath}`
+      
+      return `![${altText}](${githubRawUrl})`
+    }
+  )
+
+  return { metadata, content: transformedContent }
 }
 
 export async function fetchCTFSlugs(): Promise<string[]> {
