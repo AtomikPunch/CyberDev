@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Shield, Code, Github, Linkedin, Mail, Download, MapPin, Phone, Mail as MailIcon, Globe, Award, Briefcase, ChevronDown } from "lucide-react"
+import { Shield, Github, Linkedin, Mail, Download, MapPin, Phone, Mail as MailIcon, Globe, Award, Briefcase, ChevronDown } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -230,7 +230,7 @@ export default function HomePage() {
               I&apos;m <strong>Jad Yamout</strong>, a digital engineer specialized in cybersecurity, graduated from ESIEA with a double focus on technical mastery and business strategy. Over the past three years, I&apos;ve built strong expertise in penetration testing, IAM, malware analysis, and system hardening - both on the field and through academic research.
             </p>
             <p>
-              Over the past few years, I've worked across multiple roles in the tech industry, from <strong>IT Assistant</strong> to 
+              Over the past few years, I&apos;ve worked across multiple roles in the tech industry, from <strong>IT Assistant</strong> to 
               <strong> Software Development Engineer in Test (SDET)</strong> at <strong>B/Acceptance</strong>. 
               During my time there, I led several projects from kickoff to delivery , including meetings, reporting, and client communication. 
               I worked directly with the Chief Information Security Officer, contributing to security policy design and enforcement. 
