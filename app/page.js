@@ -10,19 +10,18 @@ export default function HomePage() {
   const stats = [
     { label: "Years of Experience", value: "3+", icon: Briefcase },
     { label: "Certifications", value: "3", icon: Award },
-    { label: "Languages", value: "2", icon: Globe },
-    { label: "Projects", value: "15+", icon: Code },
+    { label: "Languages", value: "2", icon: Globe }
   ]
 
   const certifications = [
-    { name: "AZ-500", status: "In Progress", description: "Microsoft Azure Security Technologies" },
-    { name: "Stormshield Certification", status: "SecNumedu", description: "Network Security" },
-    { name: "WALLIX Bastion", status: "PAM", description: "Privileged Access Management" },
+    { name: "Stormshield Certification", status: "Stormshield", description: "Network Security" },
+    { name: "WALLIX PAM Bastion", status: "Wallix", description: "Privileged Access Management" },
+    { name: "SecNumedu", status: "ESIEA", description: "Cybersecurity" },
   ]
 
   const skills = {
     "Programming": ["Python", "C", "Java", "C#", "JavaScript"],
-    "OS & Tools": ["Windows", "Linux", "Git", "Docker", "Jenkins"],
+    "OS & Tools": ["Windows", "Linux", "Git", "Docker", "Jenkins", "Gitlab CI/CD"],
     "Databases": ["Neo4j", "MySQL", "MongoDB"],
     "Security Tools": ["Splunk", "Microsoft Intune", "Microsoft Defender", "Azure", "Ansible"],
     "Office Tools": ["Pack Office", "Trello", "Excel", "CSV", "Pivot Tables"]
@@ -30,14 +29,14 @@ export default function HomePage() {
 
   const experiences = [
     {
-      title: "Consultant QA",
+      title: "SDET Consultant",
       company: "Sight",
       location: "Paris",
       period: "Since May 2025",
-      description: "Quality assurance and testing automation"
+      description: "Software Development Engineer in Test consultant in AMUNDI"
     },
     {
-      title: "Assistant SI - Alternant Consultant Automaticien",
+      title: "IT Assistant - Apprentice SDET Consultant",
       company: "B/acceptance",
       location: "Paris",
       period: "October 2022 - September 2024",
@@ -61,17 +60,17 @@ export default function HomePage() {
 
   const education = [
     {
-      degree: "Diplôme d'Ingénieur du Numérique - Spécialisation Cybersécurité",
+      degree: "Computer Science Engineering Degree - Cybersecurity Specialization",
       school: "ESIEA",
       location: "Paris",
       period: "September 2019 - August 2024",
       description: "Digital Engineering Degree - Cybersecurity Specialization - Business Engineer Option",
       courses: [
-        "Contrôle et audit (ISO 27001, EBIOS RM, Pentest, GDPR compliance)",
-        "Gestion des identités et des accès (SSO, MFA, OAuth2, Active Directory, Zero Trust)",
+        "Control and audit (ISO 27001, EBIOS RM, Pentest, GDPR compliance)",
+        "Identity and access management (SSO, MFA, OAuth2, Active Directory, Zero Trust)",
         "Forensic (Digital investigation)",
-        "Sécurisation des interconnexions (IPSec, TLS, Zero Trust Network)",
-        "Sécurisation des réseaux locaux (Local network security)",
+        "Interconnection security (IPSec, TLS, Zero Trust Network)",
+        "Local network security",
         "Virtual Private Network Managing Security in Google Cloud"
       ]
     },
@@ -84,7 +83,7 @@ export default function HomePage() {
       courses: ["AI-equipped drones for agricultural optimization"]
     },
     {
-      degree: "Semestre d'échange académique",
+      degree: "Academic Exchange Semester",
       school: "Glyndwr University",
       location: "Wales, United Kingdom",
       period: "September 2021 - February 2022",
@@ -106,7 +105,7 @@ export default function HomePage() {
                 Jad YAMOUT
               </h1>
               <p className="text-xl mb-4 text-gray-300 leading-relaxed">
-                Digital Engineer Graduate – Cybersecurity Specialization
+                Computer Science Engineer Graduate – Cybersecurity Specialization
               </p>
               <p className="text-lg mb-8 text-gray-400 leading-relaxed">
                 Autonomous and motivated professional with hands-on experience in cybersecurity engineering. 
@@ -118,7 +117,7 @@ export default function HomePage() {
               <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
                 <div className="flex items-center gap-2">
                   <MailIcon className="w-4 h-4" />
-                  <span>jady@hotmail.fr</span>
+                  <span>jad.y@hotmail.fr</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
@@ -138,10 +137,10 @@ export default function HomePage() {
                   IAM & Security
                 </Badge>
                 <Badge variant="secondary" className="text-sm px-3 py-1">
-                  Penetration Testing
+                  Software development engineer in test
                 </Badge>
                 <Badge variant="secondary" className="text-sm px-3 py-1">
-                  Cloud Security
+                  CTF chaser
                 </Badge>
               </div>
               <div className="flex justify-center gap-4">
@@ -208,7 +207,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {stats.map((stat, index) => (
               <Card key={index} className="text-center">
                 <CardContent className="pt-6">
@@ -231,7 +230,12 @@ export default function HomePage() {
               I&apos;m <strong>Jad Yamout</strong>, a digital engineer specialized in cybersecurity, graduated from ESIEA with a double focus on technical mastery and business strategy. Over the past three years, I&apos;ve built strong expertise in penetration testing, IAM, malware analysis, and system hardening - both on the field and through academic research.
             </p>
             <p>
-              During my time at <strong>B/Acceptance</strong>, I led several projects from kickoff to delivery - including meetings, reporting, and client communication. I worked directly with the Chief Information Security Officer, contributing to security policy design and enforcement.
+              Over the past few years, I've worked across multiple roles in the tech industry, from <strong>IT Assistant</strong> to 
+              <strong> Software Development Engineer in Test (SDET)</strong> at <strong>B/Acceptance</strong>. 
+              During my time there, I led several projects from kickoff to delivery , including meetings, reporting, and client communication. 
+              I worked directly with the Chief Information Security Officer, contributing to security policy design and enforcement. 
+              These experiences taught me how to combine automation, system administration, and cybersecurity best practices to 
+              strengthen software quality and resilience.
             </p>
             <p>
               My technical background includes <strong>TLS encryption, VLAN segmentation, ACL design, ISO 27001 compliance, and Azure Entra ID</strong> for identity and access management. I also deployed phishing simulations and contributed to endpoint security through Microsoft Defender and PowerShell automation.
