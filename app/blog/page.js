@@ -78,9 +78,9 @@ export default function BlogPage() {
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
       <div className="text-center mb-12">
-        <BookOpen className="w-16 h-16 mx-auto mb-4 text-purple-600" />
-        <h1 className="text-4xl font-bold mb-4">Blog</h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <BookOpen className="w-16 h-16 mx-auto mb-4 text-[rgb(100,150,230)]" />
+        <h1 className="text-4xl font-bold mb-4 text-foreground">Blog</h1>
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           Technical articles, tool analysis, experience sharing and reflections on the cybersecurity universe.
         </p>
       </div>
@@ -89,7 +89,7 @@ export default function BlogPage() {
       <div className="mb-8 space-y-4">
         {/* Search */}
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
           <Input
             placeholder="Search articles..."
             value={searchTerm}
@@ -100,7 +100,7 @@ export default function BlogPage() {
 
         {/* Tags Filter */}
         <div className="flex flex-wrap gap-2">
-          <span className="text-sm font-medium text-gray-700 flex items-center">
+          <span className="text-sm font-medium text-foreground flex items-center">
             <Filter className="w-4 h-4 mr-1" />
             Tags:
           </span>
@@ -119,7 +119,7 @@ export default function BlogPage() {
 
       {/* Results Count */}
       <div className="mb-6">
-        <p className="text-gray-600">
+        <p className="text-muted-foreground">
           {loading ? "Loading..." : `Showing ${filteredPosts.length} article${filteredPosts.length !== 1 ? "s" : ""}`}
         </p>
       </div>
@@ -127,32 +127,32 @@ export default function BlogPage() {
       {/* Loading State */}
       {loading && (
         <div className="text-center py-12">
-          <BookOpen className="w-16 h-16 mx-auto mb-4 text-gray-400 animate-pulse" />
-          <h3 className="text-xl font-semibold mb-2">Loading articles...</h3>
-          <p className="text-gray-600">Fetching articles from GitHub repository.</p>
+          <BookOpen className="w-16 h-16 mx-auto mb-4 text-muted-foreground animate-pulse" />
+          <h3 className="text-xl font-semibold mb-2 text-foreground">Loading articles...</h3>
+          <p className="text-muted-foreground">Fetching articles from GitHub repository.</p>
         </div>
       )}
 
       {/* Featured Article */}
       {!loading && featuredPost && (
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">Featured Article</h2>
-          <Card className="hover:shadow-lg transition-shadow">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Featured Article</h2>
+          <Card className="hover:shadow-lg transition-shadow bg-card border border-[rgb(100,150,230)]/30 hover:border-[rgb(100,150,230)]/50">
             <CardHeader>
-              <div className="flex items-center gap-2 mb-2 text-sm text-gray-500">
+              <div className="flex items-center gap-2 mb-2 text-sm text-muted-foreground">
                 <Calendar className="w-4 h-4" />
                 {new Date(featuredPost.date).toLocaleDateString("en-US")}
                 <Clock className="w-4 h-4 ml-2" />
                 {featuredPost.readTime}
               </div>
-              <CardTitle className="text-2xl">{featuredPost.title}</CardTitle>
-              <CardDescription className="text-lg">{featuredPost.description}</CardDescription>
+              <CardTitle className="text-2xl text-foreground">{featuredPost.title}</CardTitle>
+              <CardDescription className="text-lg text-muted-foreground">{featuredPost.description}</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">
                   {featuredPost.tags?.map((tag, index) => (
-                    <Badge key={index} variant="secondary">
+                    <Badge key={index} variant="secondary" className="bg-card border border-[rgb(100,150,230)]/30 text-[rgb(100,150,230)] hover:border-[rgb(100,150,230)]">
                       {tag}
                     </Badge>
                   ))}
@@ -169,25 +169,25 @@ export default function BlogPage() {
       {/* All Articles */}
       {!loading && (
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6">All Articles</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">All Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {regularPosts.map((post) => (
-              <Card key={post.slug} className="hover:shadow-lg transition-shadow">
+              <Card key={post.slug} className="hover:shadow-lg transition-shadow bg-card border border-[rgb(100,150,230)]/30 hover:border-[rgb(100,150,230)]/50">
                 <CardHeader>
-                  <div className="flex items-center gap-2 mb-2 text-sm text-gray-500">
+                  <div className="flex items-center gap-2 mb-2 text-sm text-muted-foreground">
                     <Calendar className="w-4 h-4" />
                     {new Date(post.date).toLocaleDateString("en-US")}
                     <Clock className="w-4 h-4 ml-2" />
                     {post.readTime}
                   </div>
-                  <CardTitle className="text-lg">{post.title}</CardTitle>
-                  <CardDescription>{post.description}</CardDescription>
+                  <CardTitle className="text-lg text-foreground">{post.title}</CardTitle>
+                  <CardDescription className="text-muted-foreground">{post.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
                     <div className="flex flex-wrap gap-1">
                       {post.tags?.map((tag, index) => (
-                        <Badge key={index} variant="secondary" className="text-xs">
+                        <Badge key={index} variant="secondary" className="text-xs bg-card border border-[rgb(100,150,230)]/30 text-[rgb(100,150,230)] hover:border-[rgb(100,150,230)]">
                           {tag}
                         </Badge>
                       ))}
@@ -205,9 +205,9 @@ export default function BlogPage() {
 
       {!loading && filteredPosts.length === 0 && (
         <div className="text-center py-12">
-          <BookOpen className="w-16 h-16 mx-auto mb-4 text-gray-400" />
-          <h3 className="text-xl font-semibold mb-2">No articles found</h3>
-          <p className="text-gray-600">Try modifying your search criteria or filters.</p>
+          <BookOpen className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
+          <h3 className="text-xl font-semibold mb-2 text-foreground">No articles found</h3>
+          <p className="text-muted-foreground">Try modifying your search criteria or filters.</p>
         </div>
       )}
     </div>
