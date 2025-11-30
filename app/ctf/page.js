@@ -73,7 +73,7 @@ export default function CTFPage() {
     setSelectedTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]))
   }
 
-  const getDifficultyColor = (difficulty) => {
+  const getDifficultyColor = () => {
     // Use theme colors for consistency
     return "border-[rgb(100,150,230)]/50 text-[rgb(100,150,230)] bg-card"
   }
@@ -160,7 +160,7 @@ export default function CTFPage() {
             <Card key={ctf.slug} className="hover:shadow-lg transition-shadow bg-card border border-[rgb(100,150,230)]/30 hover:border-[rgb(100,150,230)]/50">
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
-                  <Badge variant="outline" className={getDifficultyColor(ctf.difficulty)}>{ctf.difficulty}</Badge>
+                  <Badge variant="outline" className={getDifficultyColor()}>{ctf.difficulty}</Badge>
                   <Badge variant="outline" className="border-[rgb(100,150,230)]/50 text-[rgb(100,150,230)] bg-card">{ctf.platform}</Badge>
                 </div>
                 <CardTitle className="text-lg text-foreground">{ctf.title}</CardTitle>
